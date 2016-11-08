@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Day1\Program.cs" />
+    <Compile Include="Day1\Solid\D.cs" />
+    <Compile Include="Day1\Solid\I.cs" />
+    <Compile Include="Day1\Solid\L.cs" />
+    <Compile Include="Day1\Solid\O.cs" />
+    <Compile Include="Day1\Solid\S.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Day1\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Day1\Entity Framework tasks\" />
+    <Folder Include="Day2\" />
+    <Folder Include="Day3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

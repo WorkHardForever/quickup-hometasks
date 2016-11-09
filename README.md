@@ -1,2 +1,0 @@
-# quickup-hometasks
-QuickUpDev

@@ -8,13 +8,14 @@ using CodeFirst.Models;
 namespace CodeFirst.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    [Migration("20161109203544_MigrationV1.0")]
-    partial class MigrationV10
+    [Migration("20161111165555_ProjectMigration")]
+    partial class ProjectMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.0-preview1-22509");
+                .HasAnnotation("ProductVersion", "1.0.1")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CodeFirst.Models.CourseQuickUp", b =>
                 {

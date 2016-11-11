@@ -12,13 +12,11 @@ namespace AspWithEf
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<MyService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole();
@@ -28,9 +26,32 @@ namespace AspWithEf
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHello();
+
+            var currentTime = app.ApplicationServices.GetService<MyService>();
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync($"Current time: {currentTime?.GetTime()}");
+                await next.Invoke();
+            });
+
+            app.MapWhen(context =>
+            {
+                return context.Request.Query.ContainsKey("id") &&
+                        context.Request.Query["id"] == "5";
+            }, HandleId);
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
+            });
+        }
+
+        private static void HandleId(IApplicationBuilder app)
+        {
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("id is 5");
             });
         }
     }

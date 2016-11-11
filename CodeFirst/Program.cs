@@ -12,7 +12,9 @@ namespace CodeFirst
             var db = new CourseContext();
             var generator = new StudentGenerator(db);
             generator.GenerateStudents();
+            generator.Separator();
             generator.SaveChanges();
+            generator.Separator();
             generator.ShowDb();
             ReadKey();
         }

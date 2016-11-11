@@ -19,7 +19,7 @@ namespace CodeFirst.Example
             {
                 CreateNewStudent();
 
-                WriteLine("Add new Student?(Y/N) - ");
+                Write("Add new Student?(Y/N) - ");
                 if (!QueryYesNo())
                     break;
             }
@@ -34,14 +34,14 @@ namespace CodeFirst.Example
             Write("\t Name: ");
             newStudent.Name = ReadLine();
             Write("\t Age: ");
-            newStudent.Name = ReadLine();
+            int age = -1;
+            int.TryParse(ReadLine(), out age);
+            newStudent.Age = age;
 
+            Write("\t Does he visit QuickUp course?(Y/N) - ");
+            if (QueryYesNo())
+                _Database.Courses.Add(new CourseQuickUp { CleverStudent = newStudent });
             _Database.Students.Add(newStudent);
-
-            // TODO ??? //
-            //Write("\t Is he visit QuickUp course?(Y/N) - ");
-            //if (QueryYesNo())
-            //    _Database.Courses.Add(new CourseQuickUp { CleverStudent = newStudent });
         }
 
         public void SaveChanges()
@@ -57,11 +57,11 @@ namespace CodeFirst.Example
             {
                 var answer = ReadLine();
 
-                if (answer == "y")
+                if (answer == "y" || answer == "Y")
                 {
                     return true;
                 }
-                else if (answer == "n")
+                else if (answer == "n" || answer == "N")
                 {
                     return false;
                 }
@@ -75,11 +75,22 @@ namespace CodeFirst.Example
 
         public void ShowDb()
         {
-            // TODO ??? //
+            WriteLine("All students:");
             foreach (var student in _Database.Students)
             {
-                WriteLine("{0}: {1}", student.Name, student.Age);
+                WriteLine($"\t{student.Name}: {student.Age}");
             }
+
+            WriteLine("Students, which visit QuickUp course:");
+            foreach (var CourseQuickUp in _Database.Courses)
+            {
+                WriteLine($"\t{CourseQuickUp.CleverStudent.Name}");
+            }
+        }
+
+        public void Separator()
+        {
+            WriteLine("---\t---\t---\t---");
         }
     }
 }

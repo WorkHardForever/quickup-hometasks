@@ -1,0 +1,6 @@
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
+https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db
+http://www.mikesdotnetting.com/article/304/entity-framework-core-dbcontext-updated
+https://www.stevejgordon.co.uk/exploring-entity-framework-core-1-0-0-rtm-changes
+http://www.restapitutorial.com/lessons/restfulresourcenaming.html
+http://metanit.com/sharp/aspnet5/6.1.php

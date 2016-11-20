@@ -1,5 +1,4 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 using CodeFirst.Models;
 
 namespace CodeFirst.Example

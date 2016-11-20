@@ -25,6 +25,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF", "EF", "{FF29B8F5-AD89-47C1-8DB7-A17D8D283672}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseFirst", "DatabaseFirst", "{16A61347-99BD-4E76-8C13-51C3C43245BB}"
+	ProjectSection(SolutionItems) = preProject
+		DatabaseFirst\UsingSources.txt = DatabaseFirst\UsingSources.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeFirst", "CodeFirst", "{E0B06BDD-BC03-4BA7-9747-9BC8FBF59744}"
 EndProject
@@ -33,6 +36,10 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeFirst", "CodeFirst\CodeFirst.xproj", "{8326DE51-DC0A-4C75-AD47-0E761330F2B2}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspWithEf", "AspWithEf\AspWithEf.xproj", "{025DAEAD-2C8C-4111-9946-246AC5F88826}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day4", "Day4", "{6A764C06-B9DA-454A-9776-78E50DE2B62B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day5", "Day5", "{56F26682-B0DA-4479-BE4C-8D2536C6243A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

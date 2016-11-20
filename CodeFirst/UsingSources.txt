@@ -1,0 +1,3 @@
+﻿1) https://docs.efproject.net/en/latest/platforms/full-dotnet/new-db.html
+2) http://stackoverflow.com/questions/38306791/add-migration-fails-because-entityframeworkcore-tools-is-not-installed
+3) https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html
